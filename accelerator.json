@@ -1,8 +1,8 @@
 {
   "name": "Nodejs accelerator",
-  "environment_variables" : [
+  "environmentVariables" : [
     {
-      "action_path": ".github/workflows/deploy.yml",
+      "actionPath": ".github/workflows/deploy.yml",
       "variables": [
         {
           "name": "RESOURCE_NAME",
