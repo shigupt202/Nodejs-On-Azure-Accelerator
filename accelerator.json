@@ -7,7 +7,7 @@
     "variables": [
       {
         "name": "RESOURCE_NAME",
-        "description": "The name of the resource",
+        "description": "The name of the resource"
       },
       {
         "name": "CONNECTION_ID",
