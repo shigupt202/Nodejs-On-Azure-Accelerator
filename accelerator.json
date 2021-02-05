@@ -3,7 +3,17 @@
   "description": "This is a nodejs accelerator",
   "environmentVariables" : [
   {
-    "actionPath": ".github/workflows/deploy.yml"
+    "actionPath": ".github/workflows/deploy.yml",
+    "variables": [
+      {
+        "name": "RESOURCE_NAME",
+        "description": "The name of the resource",
+      },
+      {
+        "name": "CONNECTION_ID",
+        "description": "The connection id"
+      }
+      ]
   }
   ],
   "secrets" : [
