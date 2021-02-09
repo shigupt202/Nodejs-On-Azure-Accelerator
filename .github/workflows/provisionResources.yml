@@ -2,6 +2,10 @@ on:
   workflow_dispatch:
 
 name: Provision azure resources
+env:
+  RESOURCE_GROUP_NAME: "sample-ganes-rg"
+  RESOURCE_GROUP_LOCATION: "eastus"
+  AKS_CLUSTER_NAME: "sample-ganes-cluster"
 
 jobs:
   provision-azure-resources:
@@ -13,3 +17,10 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{secrets.AZURE_CREDENTIALS}}
+    - name: Create resource group
+      uses: Azure/cli@1.0.4
+      with:
+        inlineScript: |
+          if [ $(az group exists --name $RESOURCE_GROUP_NAME) = false ]; then
+            az group create --name $RESOURCE_GROUP_NAME --location $RESOURCE_GROUP_LOCATION
+          fi
