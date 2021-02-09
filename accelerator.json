@@ -29,7 +29,7 @@
   "startupWorkflows" : [
     {
       "path": ".github/workflows/provisionResources.yml",
-      "name": "provisionResources",
+      "name": "provisionResources.yml",
       "ref": "main"
     }
     ]
