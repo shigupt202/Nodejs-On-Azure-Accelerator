@@ -10,6 +10,10 @@
         "description": "Enter the name of the resource group"
       },
       {
+        "name": "RESOURCE_GROUP_LOCATION",
+        "description": "Enter the resource group location"
+      },
+      {
         "name": "AKS_CLUSTER_NAME",
         "description": "Enter the name of the cluster"
       }
