@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "appName": {
-            "value": "sample-node-app"
+            "value": "${{acc.FUNCTION_APP_NAME}}"
         },
         "runtime": {
-            "value": "node"
+            "value": "${{acc.RUN_TIME}}"
         },
         "appInsightsLocation": {
-            "value": "eastus"
+            "value": "${{acc.APP_INSIGHTS_LOCATION}}"
         }
       }
   }
