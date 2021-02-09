@@ -32,5 +32,5 @@ jobs:
       with:
         scope: 'resourcegroup'
         resourceGroupName: $RESOURCE_GROUP_NAME
-        template: '../../deployManifests/functionAppTemplate.json'
-        parameters: '../../deployManifests/functionAppDeploy.parameters.json'
+        template: 'deployManifests/functionAppTemplate.json'
+        parameters: 'deployManifests/functionAppDeploy.parameters.json'
