@@ -31,6 +31,6 @@ jobs:
       uses: Azure/arm-deploy@v1
       with:
         scope: 'resourcegroup'
-        resourceGroupName: $RESOURCE_GROUP_NAME
+        resourceGroupName: ${{env.RESOURCE_GROUP_NAME}}
         template: 'deployManifests/functionAppTemplate.json'
         parameters: 'deployManifests/functionAppDeploy.parameters.json'
