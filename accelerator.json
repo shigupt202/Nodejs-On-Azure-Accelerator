@@ -6,12 +6,12 @@
     "workflowPath": ".github/workflows/deploy.yml",
     "variables": [
       {
-        "name": "RESOURCE_NAME",
-        "description": "The name of the resource"
+        "name": "RESOURCE_GROUP",
+        "description": "Enter the name of the resource group"
       },
       {
-        "name": "CONNECTION_ID",
-        "description": "The connection id"
+        "name": "AKS_CLUSTER_NAME",
+        "description": "Enter the name of the cluster"
       }
       ]
   }
@@ -19,7 +19,14 @@
   "secrets" : [
     {
       "name": "AZURE_CREDENTIALS",
-      "description": "Enter your azure credentials (Output of az ad sp create-for-rbac command)"
+      "description": "Enter your azure credentials (Output of az ad sp create-for-rbac --sdk-auth command)"
+    }
+    ],
+  "startupWorkflows" : [
+    {
+      "path": ".github/workflows/provisionResources.yml",
+      "name": "provisionResources.yml",
+      "ref": "main"
     }
     ]
 }
