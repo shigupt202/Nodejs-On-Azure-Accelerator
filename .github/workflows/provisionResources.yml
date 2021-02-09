@@ -24,3 +24,10 @@ jobs:
           if [ $(az group exists --name $RESOURCE_GROUP_NAME) = false ]; then
             az group create --name $RESOURCE_GROUP_NAME --location $RESOURCE_GROUP_LOCATION
           fi
+    - name: Deploy ARM template for function app
+      uses: Azure/arm-deploy@v1
+      with:
+        scope: 'resourcegroup'
+        resourceGroupName: $RESOURCE_GROUP_NAME
+        template: '../../deployManifests/functionAppTemplate.json'
+        parameters: '../../deployManifests/functionAppDeploy.parameters.json'
