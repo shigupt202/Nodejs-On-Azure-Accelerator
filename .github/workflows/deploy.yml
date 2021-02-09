@@ -20,3 +20,7 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{secrets.AZURE_CREDENTIALS}}
+    - name: Deploy application to function app
+      uses: Azure/functions-action@v1.3.1
+      with:
+        app-name: 'sample-node-app'
