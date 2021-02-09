@@ -28,7 +28,7 @@ jobs:
             az group create --name $RESOURCE_GROUP_NAME --location $RESOURCE_GROUP_LOCATION
           fi
     - name: Deploy ARM template for function app
-      uses: Azure/arm-deploy@v1
+      uses: Azure/arm-deploy@main
       with:
         scope: 'resourcegroup'
         resourceGroupName: ${{env.RESOURCE_GROUP_NAME}}
